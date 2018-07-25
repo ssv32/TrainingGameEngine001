@@ -13,8 +13,10 @@ class player : public box {
 		int NII; // номер модели поведения // для врагов // поведение в классе II 
 		char* name; // имя игрока
 	
-	protected:
+	public:
 		/*player() : {
 			
 		};*/
+		
+		
 };
