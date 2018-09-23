@@ -1,5 +1,5 @@
 class game{
-	private:
+	public:
 		int statDisplay; // состояние экрана 
 		// состояния экрана
 		//  0 - главное меню
@@ -8,12 +8,18 @@ class game{
 		//  3 - пауза (пауза во время игры нажата)
 		////
 		
-		string Scenas[2] = { "data/scena1.txt" , "data/scena1.txt" }; // список сцен // потом подгрузятся в класс сцена
-		
+		string scenas[2]; // список сцен // потом подгрузятся в класс сцена
+
 		
 	public:
 		
-		game() : statDisplay(0){};
+		game() : statDisplay(0){
+			
+			// список карт
+			scenas[0] = "data/scena1.txt";
+			scenas[1] = "data/scena1.txt";
+		};
+		
 		game(int in) : statDisplay(in){};
 		
 		int get_statDisplay() {// получить текущее состояние игры 
@@ -29,7 +35,7 @@ class game{
 			return 1;
 		} 
 		
-		
+		int set_scenas(string sc[]);
 		
 		void gameloop();
 		
